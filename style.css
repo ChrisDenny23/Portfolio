@@ -296,6 +296,7 @@ header ul a{
 
 .card h1{
     position: absolute;
+    display: flex;
     margin: 0;
     bottom: 40%;
     left: 5%;
@@ -306,6 +307,7 @@ header ul a{
 
 .card p{
   position: absolute;  
+  display: flex;
   bottom: 3%;
   left: 5%;
   z-index: 1;
@@ -378,7 +380,7 @@ header ul a{
 .my-projects{
     display: flex;
     flex-direction: column;
-    gap: 10%;
+    gap: 30%;
     align-items: center;
     position: relative;
     width: 80%;
@@ -392,8 +394,9 @@ header ul a{
     width: 100%;
     height: 40%;
     align-items: center;
-    gap: 10%;
+    gap: 0%;
     justify-content: center;
+    /* aspect-ratio: 0.5; */
 }
 
 .project-vidbox{
@@ -406,14 +409,17 @@ header ul a{
     min-width: 400px;
     transition: 0.5s;
     mix-blend-mode: exclusion;
+    /* aspect-ratio: 0.5; */
 }
 
 .project-vidbox video{
     object-fit: cover;
+    max-width: 200px;
     width: 100%;
     box-shadow: 0 0 10px lightgray;
     border-radius: 20px;
     transition: 0.5s;
+    /* aspect-ratio: 0.4; */
 }
 
 .project-vidbox video:hover{
@@ -513,6 +519,7 @@ header ul a{
     flex-direction: column;
     align-items: center;
     position: relative;
+    margin-top: 400px;
 }
 
 .skills-box{
@@ -891,13 +898,21 @@ footer h1{
 
 
 
-@media (min-aspect-ratio: 16/9) {
+
+@media (max-aspect-ratio: 16/9){
+    .back-vid{
+        width: auto;
+        height: 100%;
+    }
+}
+
+@media (min-aspect-ratio: 16/9){
     .back-vid{
         width: 100%;
         height: auto;
-
     }
 }
+
 
 
 /* tablet responsive */
